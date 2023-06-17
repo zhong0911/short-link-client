@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Antx - 短链接</title>
+    <meta name="application-name" content="Antx">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <link rel="icon" href="https://image.antx.cc/logo/antx/favicon.ico" type="image/gif">
+    <script src="https://cdn.antx.cc/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdn.antx.cc/libs/antx/antx.utils.min.js"></script>
+    <script src="https://cdn.antx.cc/libs/antx/antx.collina.min.js"></script>
+    <script src="https://cdn.antx.cc/libs/antx/antx.prompt.min.js"></script>
+    <script src="https://cdn.antx.cc/libs/jquery-url/1.0/jquery.url.js"></script>
+    <script src="https://cdn.antx.cc/libs/jquery-growl/1.3.5/js/jquery.growl.js"></script>
+    <script src="https://cdn.antx.cc/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    <script src="https://cdn.antx.cc/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.antx.cc/libs/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.antx.cc/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="/static/js/index.js"></script>
+    <script src="/static/js/public.js"></script>
+    <link href="/static/css/index.css" rel="stylesheet">
+    <link href="/static/css/public.css" rel="stylesheet">
+</head>
+<body>
+<div id="header" class="container text-end"></div>
+<div id="body" class="container mt-5">
+    <form class="container" action="" id="search-form" name="generation-form" method="post"
+          onsubmit="return generateShortLInk()">
+        <p class="h2 mt-5 text-center">短链接生成</p>
+        <div>
+            <div class="mt-5 input-group">
+                <label for="protocol"></label>
+                <select id="protocol" class="form-select form-select-sm" name="protocol">
+                    <option id="http" value="http">http://</option>
+                    <option id="https" value="https">https://</option>
+                </select>
+                <label class="form-label" for="long-link"></label>
+                <input type="text" class="w-75 form-control input" id="long-link"
+                       placeholder="请输入链接"
+                       name="long-link" value=""/>
+                <button class="btn btn-primary" type="submit" id="generate">生成短链接</button>
+            </div>
+            <small id="long-link-error" class="form-text error"></small>
+            <small id="long-link-success" class="form-text success"></small>
+        </div>
+    </form>
+    <div class="mt-5 container">
+        <div id="long-link-info">
+                    <span id="clear">
+            <a class="pull-right text-primary text-decoration-none" href="javascript:void(0)"
+               id="clear-history">清除生成记录</a>
+        </span>
+            <table class="table-responsive-sm table table-hover">
+                <thead>
+                <tr>
+                    <th>短链接</th>
+                    <th>长链接</th>
+                    <th>生成时间</th>
+                    <th>过期时间</th>
+                    <th>剩余天数</th>
+                </tr>
+                </thead>
+                <tbody id="short-links">
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<div id="footer" class="container"></div>
+<script src="https://sdk.51.la/perf/js-sdk-perf.min.js" crossorigin="anonymous"></script>
+<script src="https://sdk.51.la/js-sdk-pro.min.js" charset="UTF-8" id="LA_COLLECT"></script>
+<script>new LingQue.Monitor().init({id: "K3lq427w5UzjJNnc"});</script>
+<script>LA.init({id: "K3YbhorpSsvgIqKm", ck: "K3YbhorpSsvgIqKm"})</script>
+</body>
+</html>
